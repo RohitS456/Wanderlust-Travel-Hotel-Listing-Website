@@ -1,0 +1,36 @@
+<% layout("/Layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Edit this data</h3>
+
+    <form method="post" action="/listing/<%=data._id %>/?_method=PUT">
+        <div class="mb-2">
+            <label for="title" class="form-label">Title</label>
+            <input name="title" value="<%= data.title %>" type="text" class="form-control">
+        </div>
+       <div class="mb-2">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" type="text" class="form-control"><%= data.description %></textarea>
+       </div>
+        <div class="mb-2">
+            <label for="image" class="form-label">Image</label>
+            <input name="image" value="<%=data.image %>" type="text" class="form-control">
+        </div>
+       <div class="mb-2">
+        <label for="price" class="form-label">Price</label>
+        <input name="price" value="<%= data.price %>" type="number" class="form-control">
+       </div>
+       <div class="mb-2">
+        <label for="country" class="form-label"></label>
+        <input name="country" value="<%= data.country %>" type="text" class="form-control">
+       </div>
+        
+        <br>
+        <br>
+        <button type="submit" class="btn btn-dark edit-btn" >Edit</button>
+    </form>
+    </div>
+    </div>
+    
+</body>

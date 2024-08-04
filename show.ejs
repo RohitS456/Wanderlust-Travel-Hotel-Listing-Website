@@ -1,0 +1,30 @@
+<% layout("/Layouts/boilerplate") %>
+<body>
+<div class="row">
+    <div class="col-8 offset-3">
+
+    <div class="card">
+        <div class="card" style="width: 18rem;">
+            <img src="<%=Idres.image %>" class="card-img-top show-img" alt="Listing image">
+            <div class="card-body">
+              <p class="card-text"><b><%= Idres.title %></b> <br>
+                <%= Idres.description %> <br>
+                &#8377;<%= Idres.price.toLocaleString("en-In") %> <br>
+                <%= Idres.country %> <br>
+            </p>
+            </div>
+          </div>
+    </div>
+    <div class="btn">
+   <a href="/listing/<%=Idres._id %>/edit" class="btn btn-dark">Edit this data</a>
+    </div>
+   <div class="btn">
+    <form method="post" action="/listing/<%=Idres._id %>/?_method=DELETE">
+        <button > Delete this Data!</button>
+   </div>
+    <br> <br>
+   
+     </form>
+   </div>
+   </div>
+</body>
